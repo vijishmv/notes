@@ -1,4 +1,4 @@
-Fedora CoreOS is an
+Fedora CoreOS (FCOS) is an
 - automatically updating
 - minimal
 - monolithic
@@ -20,4 +20,9 @@ Fedora CoreOS is the upstream basis for Red Hat CoreOS (RHCOS).
 
 Fedora CoreOS is used as 'control plane node and workers' in OKD - the upstream of OpenShift Container Platform. 
 
+FCOS is provisioned using ignition config file. 
+Applications are run using containers.
+Systemd is configured using ignition to start desired applications as containers during runtime. 
 
+### References ###
+https://docs.fedoraproject.org/en-US/fedora-coreos/  
