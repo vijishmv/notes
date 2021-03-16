@@ -1,4 +1,4 @@
-### firewalld
+## firewalld
 
 Firewalld is a frontend to nftables. It provides a simple cli tool - **firewall-cmd** and a a GUI tool - **firewall-config**.
 
