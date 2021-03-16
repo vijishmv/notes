@@ -49,6 +49,10 @@ public (active)
 #
 ```
 
+The first line indicates the zones that are active currently. 
+
+The services line indicates the services that are permitted by the firewall. These are the predefined services available in /usr/lib/firewalld/services/ . If a service is not availble, it can be created as an xml file and placed in /usr/lib/firewalld/services/. Or the necessary port used by the service can be specified which will be thus mentioned in the 'ports' line. 
+
 Changes made via firewall-cmd don't take effect without executing `firewall-cmd --reload`.
 
 To save the changes and apply the same even after reboot `firewall-cmd --permanent`.
