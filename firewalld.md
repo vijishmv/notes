@@ -13,19 +13,25 @@ Firewalld makes it easier to specify services by using the name of the service r
 The top layer of organization in firewalld is zones. Then comes **tables** (which is based on a family)  and finally the **chain**. Unlike iptables/ip6tables, tables and chains are not pre-created. 
 
 There are several predefined zones available. To list them:
+
 `# firewall-cmd --get-zones
+
 block dmz drop external home internal public trusted work
+
 #`
 
 The zones that are active currently is determined with:
+
 `# firewall-cmd --get-active-zones
+
 public
+
   interfaces: enp0s3
+
 #`
 
 Changes made via firewall-cmd don't take effect without executing `firewall-cmd --reload`.
 
 To save the changes and apply the same even after reboot `firewall-cmd --permanent`.
-
 
 
