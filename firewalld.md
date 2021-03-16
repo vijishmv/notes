@@ -31,6 +31,26 @@ public
 #
 ```
 
+To list all the firewall rules in use currently:
+```
+# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s3
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports:
+  protocols:
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+#
+```
+
 Changes made via firewall-cmd don't take effect without executing `firewall-cmd --reload`.
 
 To save the changes and apply the same even after reboot `firewall-cmd --permanent`.
