@@ -14,21 +14,16 @@ The top layer of organization in firewalld is zones. Then comes **tables** (whic
 
 There are several predefined zones available. To list them:
 
-`# firewall-cmd --get-zones
-
+```# firewall-cmd --get-zones
 block dmz drop external home internal public trusted work
-
-#`
+#```
 
 The zones that are active currently is determined with:
 
-`# firewall-cmd --get-active-zones
-
+```# firewall-cmd --get-active-zones
 public
-
   interfaces: enp0s3
-
-#`
+#```
 
 Changes made via firewall-cmd don't take effect without executing `firewall-cmd --reload`.
 
